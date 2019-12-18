@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML FORM</title>
+</head>
+
+<body>
+
+
+
+  <%= form_for @user do |f| %>
+    
+      <%= f.label :username %>
+      <%= f.text_field @user.username %>
+
+
+      <%= f.label :email %>
+      <%= f.email_field @user.email %>
+
+      <%= f.label :password %>
+      <%= f.password_field @user.password %>
+
+      <%= f.submit "Submit"%>
+    <% end %> 
+
+</body>
+
+</html>
