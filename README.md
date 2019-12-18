@@ -1,16 +1,13 @@
 # Project Name
 
-> One paragraph statement about the project.
-
-![screenshot](https://raw.githubusercontent.com/ChristianOtieno/readme-template/master/app_screenshot.png)
+> In this project, we built a form the old fashioned way and then the Rails way.
 
 Additional description about the project and its features.
 
 ## Built With
 
-- Major languages,
-- frameworks,
-- technologies used
+- Embended Ruby,
+- Ruby on Rails
 
 ## Live Demo
 
@@ -18,22 +15,26 @@ Additional description about the project and its features.
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
 ### Setup
 
+> git clone https://github.com/ChristianOtieno/re-former
+
 ### Install
+
+> bundle install
 
 ### Usage
 
+> rails server
+
 ### Run tests
 
-### Deployment
+> rails test:models
+> rails test
 
 ## Authors
 
@@ -57,12 +58,6 @@ Feel free to check the [issues page](issues/).
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
 
 ## 📝 License
 
