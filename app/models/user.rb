@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class User < ApplicationRecord
-  def setup
-    @user = User.new(username: 'username', email: 'example@mail.com', password: 'password')
-  end
+  validates :username, presence: true, length: { maximum: 15 }
+  validates :email, presence: true, length: { maximum: 255 }
+  validates :password, presence: true
 end
