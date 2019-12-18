@@ -5,23 +5,20 @@
 </head>
 
 <body>
+  <%= form_for (@user) do |f| %>
+    <%= render 'shared/error_messages' %>
 
+    <%= f.label :username %>
+    <%= f.text_field :username, placeholder: "Insert your Username" %>
 
+    <%= f.label :email %>
+    <%= f.email_field :email, placeholder: "Insert your Email" %>
 
-  <%= form_for @user do |f| %>
-    
-      <%= f.label :username %>
-      <%= f.text_field @user.username %>
+    <%= f.label :password %>
+    <%= f.password_field :password, placeholder: "Insert your Password"  %>
 
-
-      <%= f.label :email %>
-      <%= f.email_field @user.email %>
-
-      <%= f.label :password %>
-      <%= f.password_field @user.password %>
-
-      <%= f.submit "Submit"%>
-    <% end %> 
+    <%= f.submit "Submit"%>
+  <% end %> 
 
 </body>
 
