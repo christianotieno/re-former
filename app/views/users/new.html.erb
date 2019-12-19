@@ -16,31 +16,29 @@
 <% end %> 
 
 
-<%
-=begin%>
-<%= form_with(url: "/users", scope: "user", method: "post") do |f| %>
 
-  <%= f.label(:username, "username") %>
-  <%= f.text_field(:username) %>
 
-  <%= f.label(:email, "email") %>
-  <%= f.email_field(:email) %>
+<%# <%= form_with(url: "/users", scope: "user", method: "post") do |f| %> 
 
-  <%= f.label(:passowrd, "password") %>
-  <%= f.password_field(:password) %>
-  <br><br>
-  <%= f.submit('Submit')%>
-<% end %>
+  <%# <%= f.label(:username, "username") %> 
+  <%# <%= f.text_field(:username) %> 
 
-<form action="/users" method="post"> 
-  <label for="user_username">username</label>
-  <input type="text" name="user[username]" id="username" />
-  <label for="email">email</label>
-  <input type="email" name="user[email]" id="email" />
-  <label for="passowrd">password</label>
-  <input type="password" name="user[password]" id="password" />
-  <br><br>
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-</form>  
-<%
-=end%>
+  <%# <%= f.label(:email, "email") %> 
+  <%# <%= f.email_field(:email) %> 
+
+  <%# <%= f.label(:passowrd, "password") %> 
+  <%# <%= f.password_field(:password) %> 
+  <%# <br><br> %>
+  <%# <%= f.submit('Submit')%> 
+<%# <% end %> 
+
+<%# <form action="/users" method="post">  %>
+  <%# <label for="user_username">username</label> %>
+  <%# <input type="text" name="user[username]" id="username" /> %>
+  <%# <label for="email">email</label> %>
+  <%# <input type="email" name="user[email]" id="email" /> %>
+  <%# <label for="passowrd">password</label> %>
+  <%# <input type="password" name="user[password]" id="password" /> %>
+  <%# <br><br> %>
+  <%# <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token"%>
+<%# </form>   %>
