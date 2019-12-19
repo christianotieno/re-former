@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class UsersController < ApplicationController
-    
   # GET /users
   def new
     @user = User.new
@@ -50,7 +49,6 @@ class UsersController < ApplicationController
       format.json { head :no_content }
     end
   end
-
 
   private
 
