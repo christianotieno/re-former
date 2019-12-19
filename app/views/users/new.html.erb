@@ -1,24 +1,46 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>HTML FORM</title>
-</head>
+<h1>New User</h1>
 
-<body>
-  <%= form_for (@user) do |f| %>
-    <%= render 'shared/error_messages' %>
-      <%= f.label :username %>
-      <%= f.text_field :username %>
+<%= form_for (@user) do |f| %>
+  <%= render 'shared/error_messages' %>
+  
+  <%= f.label :username %>
+  <%= f.text_field :username %>
 
-      <%= f.label :email %>
-      <%= f.email_field :email, placeholder: "Insert your Email" %>
+  <%= f.label :email %>
+  <%= f.email_field :email, placeholder: "Insert your Email" %>
 
-      <%= f.label :password %>
-      <%= f.password_field :password, placeholder: "Insert your Password"  %>
+  <%= f.label :password %>
+  <%= f.password_field :password, placeholder: "Insert your Password"  %>
 
-      <%= f.submit "Submit"%>
-  <% end %> 
+  <%= f.submit "Submit"%>
+<% end %> 
 
-</body>
 
-</html>
+<%
+=begin%>
+<%= form_with(url: "/users", scope: "user", method: "post") do |f| %>
+
+  <%= f.label(:username, "username") %>
+  <%= f.text_field(:username) %>
+
+  <%= f.label(:email, "email") %>
+  <%= f.email_field(:email) %>
+
+  <%= f.label(:passowrd, "password") %>
+  <%= f.password_field(:password) %>
+  <br><br>
+  <%= f.submit('Submit')%>
+<% end %>
+
+<form action="/users" method="post"> 
+  <label for="user_username">username</label>
+  <input type="text" name="user[username]" id="username" />
+  <label for="email">email</label>
+  <input type="email" name="user[email]" id="email" />
+  <label for="passowrd">password</label>
+  <input type="password" name="user[password]" id="password" />
+  <br><br>
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+</form>  
+<%
+=end%>
