@@ -20,17 +20,18 @@
 
 <%# <%= form_with(url: "/users", scope: "user", method: "post") do |f| %> 
 
-  <%# <%= f.label(:username, "username") %> 
-  <%# <%= f.text_field(:username) %> 
+<%# <%= form_tag("/users") do %> 
+      <%# <%= label_tag(:username, "username") %> 
+      <%# <%= text_field_tag :username %>
 
-  <%# <%= f.label(:email, "email") %> 
-  <%# <%= f.email_field(:email) %> 
+      <%# <%= label_tag(:email, "email") %> 
+      <%# <%= email_field_tag :email %> 
 
-  <%# <%= f.label(:passowrd, "password") %> 
-  <%# <%= f.password_field(:password) %> 
-  <%# <br><br> %>
-  <%# <%= f.submit('Submit')%> 
-<%# <% end %> 
+      <%# <%= label_tag(:password, "password") %> 
+      <%# <%= password_field_tag :password %> 
+
+      <%# <%= submit_tag "Submit"%> 
+    <%# <% end %> 
 
 <%# <form action="/users" method="post">  %>
   <%# <label for="user_username">username</label> %>
