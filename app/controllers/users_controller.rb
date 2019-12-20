@@ -1,6 +1,16 @@
 # frozen_string_literal: true
 
 class UsersController < ApplicationController
+  before_action :set_user, only: %i[show edit update destroy]
+
+  # GET /users
+  def index
+    @user = User.all
+  end
+
+  # GET /users/1
+  def show; end
+
   # GET /users
   def new
     @user = User.new
@@ -26,15 +36,10 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1
   def update
     set_user
-    respond_to do |f|
-      if @user.update(user_params)
-        f.html do
-          redirect_to @user, notice: 'User was successfully updated.'
-        end
-      else
-        f.html { render :edit }
-        f.json { render json: @user.errors, status: :unprocessable_entity }
-      end
+    if @user.update(user_params)
+      redirect_to new_user_path
+    else
+      render :edit
     end
   end
 
