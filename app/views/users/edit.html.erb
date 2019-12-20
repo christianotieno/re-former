@@ -1,0 +1,15 @@
+
+<%= form_for :user do |f| %>
+  <%= render 'shared/error_messages' %>
+
+  <%= f.label :username %>
+  <%= f.text_field :username, placeholder: "Insert your Username" %>
+
+  <%= f.label :email %>
+  <%= f.email_field :email, placeholder: "Insert your Email" %>
+
+  <%= f.label :password %>
+  <%= f.password_field :password, placeholder: "Insert your Password"  %>
+
+  <%= f.submit "Submit"%>
+<% end %> 
