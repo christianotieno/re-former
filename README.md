@@ -2,11 +2,11 @@
 
 > In this project, we built a form the old fashioned way and then the Rails way.
 
-Additional description about the project and its features.
+A summary description of the project and its features illustrated below.
 
 ## Built With
 
-- Embended Ruby,
+- Embedded Ruby,
 - Ruby on Rails
 
 ## Live Demo
