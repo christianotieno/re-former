@@ -40,7 +40,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 # Provides a better error page for Rails and other Rack apps.
 # Includes source code inspection, a live REPL and local/instance variable inspection for all stack frames.
-gem 'better_errors', '~> 2.5', '>= 2.5.1'
+gem 'better_errors', '~> 2.8'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
